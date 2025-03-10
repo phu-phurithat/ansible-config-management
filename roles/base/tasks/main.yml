@@ -12,6 +12,11 @@
       - curl
     state: present
 
+- name: Install firewalld
+  apt:
+    name: firewalld
+    state: present
+
 - name: Enable and start firewalld
   service:
     name: firewalld
