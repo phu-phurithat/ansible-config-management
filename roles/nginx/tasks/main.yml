@@ -17,9 +17,3 @@
     dest: /etc/nginx/nginx.conf
   notify:
     - restart nginx
-
-- name: Restart Nginx
-  systemd:
-    name: nginx
-    state: restarted
-  listen: restart nginx
