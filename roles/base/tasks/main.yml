@@ -1,24 +1,9 @@
----
-- name: Update all packages
+- name: Update and upgrade system
   apt:
     update_cache: yes
     upgrade: dist
 
-- name: Install useful utilities
+- name: Install basic utilities
   apt:
-    name:
-      - vim
-      - git
-      - curl
+    name: ["curl", "vim", "git", "ufw", "fail2ban"]
     state: present
-
-- name: Install firewalld
-  apt:
-    name: firewalld
-    state: present
-
-- name: Enable and start firewalld
-  service:
-    name: firewalld
-    state: started
-    enabled: true
