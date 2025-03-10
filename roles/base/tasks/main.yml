@@ -1,11 +1,11 @@
 ---
 - name: Update all packages
-  dnf:
-    name: "*"
-    state: latest
+  apt:
+    update_cache: yes
+    upgrade: dist
 
 - name: Install useful utilities
-  dnf:
+  apt:
     name:
       - vim
       - git

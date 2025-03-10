@@ -2,4 +2,4 @@
 - name: Add SSH public key to the server
   authorized_key:
     user: ubuntu
-    key: "{{ lookup('file', '/home/ubuntu/.ssh/id_rsa.pub') }}"
+    key: "{{ lookup('file', '/home/ubuntu/.ssh/id_rsa_1.pub') }}"
